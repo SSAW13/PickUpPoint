@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PickUpPoint.PersonalCabinetPage"
+             Title="Личный кабинет">
+
+    <VerticalStackLayout Spacing="20" Padding="20">
+        <Label Text="Данные пользователя" FontSize="20" TextColor="White"/>
+        <Label x:Name="lastname" Text="Фамилия:" TextColor="White"/>
+        <Label x:Name="name"  Text="Имя:" TextColor="White"/>
+        <Label x:Name="role" Text="Роль:" TextColor="White"/>
+
+
+        <Entry Placeholder="Введите старый пароль"/>
+        <Entry Placeholder="Введите новый пароль"/>
+        <Entry Placeholder="Повторите новый пароль"/>
+
+        <Button Text="Сменить пароль"
+                Clicked="ChangeClicked"
+                BackgroundColor="Green"
+                TextColor="White"/>
+        
+
+        <Button Text="Выйти" 
+                Clicked="LogoutClicked"
+                BackgroundColor="Red"
+                TextColor="White"/>
+    </VerticalStackLayout>
+</ContentPage>

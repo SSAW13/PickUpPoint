@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- Цветовая палитра -->
+    <Color x:Key="PrimaryColor">#512BD4</Color>
+    <Color x:Key="SecondaryColor">#2B0B98</Color>
+    <Color x:Key="LightBackground">#F8F9FA</Color>
+    <Color x:Key="SuccessColor">#28A745</Color>
+    <Color x:Key="DangerColor">#DC3545</Color>
+    <Color x:Key="DarkText">#212529</Color>
+    <Color x:Key="BorderColor">#CED4DA</Color>
+
+    <!-- Базовые стили -->
+    <Style TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource DarkText}"/>
+        <Setter Property="FontFamily" Value="OpenSansRegular"/>
+    </Style>
+
+    <Style TargetType="Entry">
+        <Setter Property="BackgroundColor" Value="White"/>
+        <Setter Property="TextColor" Value="{StaticResource DarkText}"/>
+        <Setter Property="PlaceholderColor" Value="#6C757D"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="HeightRequest" Value="45"/>
+        <Setter Property="Margin" Value="0,5"/>
+        <Setter Property="ClearButtonVisibility" Value="WhileEditing"/>
+        <Setter Property="Keyboard" Value="Default"/>
+    </Style>
+
+    <!-- Стили для кнопок -->
+    <Style TargetType="Button" x:Key="BaseButtonStyle">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="Padding" Value="14,8"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Scale" Value="1"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="Scale" Value="0.97"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Button" x:Key="PrimaryButtonStyle" BasedOn="{StaticResource BaseButtonStyle}">
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="SuccessButtonStyle" BasedOn="{StaticResource BaseButtonStyle}">
+        <Setter Property="BackgroundColor" Value="{StaticResource SuccessColor}"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="DangerButtonStyle" BasedOn="{StaticResource BaseButtonStyle}">
+        <Setter Property="BackgroundColor" Value="{StaticResource DangerColor}"/>
+    </Style>
+
+    <!-- Стили для заголовков -->
+    <Style TargetType="Label" x:Key="TitleLabelStyle">
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="Margin" Value="0,20"/>
+    </Style>
+
+    <!-- Стиль для карточек (Frame) -->
+    <Style TargetType="Frame" x:Key="CardFrameStyle">
+        <Setter Property="BackgroundColor" Value="White"/>
+        <Setter Property="BorderColor" Value="{StaticResource BorderColor}"/>
+        <Setter Property="CornerRadius" Value="12"/>
+        <Setter Property="HasShadow" Value="True"/>
+        <Setter Property="Padding" Value="15"/>
+        <Setter Property="Margin" Value="0,10"/>
+    </Style>
+
+    <!-- Стиль для ListView -->
+    <Style TargetType="ListView">
+        <Setter Property="SeparatorVisibility" Value="None"/>
+        <Setter Property="BackgroundColor" Value="Transparent"/>
+        <Setter Property="SelectionMode" Value="None"/>
+    </Style>
+
+    <!-- Глобальный фон страниц -->
+    <Style TargetType="ContentPage">
+        <Setter Property="BackgroundColor" Value="{StaticResource LightBackground}"/>
+    </Style>
+
+</ResourceDictionary>

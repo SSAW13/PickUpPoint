@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PickUpPoint.AddOrderPage"
+             Title="Добавить заказ">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+            <Entry Placeholder="Номер ячейки склада" Keyboard="Numeric"/>
+            <Entry Placeholder="Имя клиента"/>
+            <Entry Placeholder="Телефон" Keyboard="Telephone"/>
+
+            <Button Text="Сохранить заказ" 
+                    BackgroundColor="#512BD4"
+                    TextColor="White"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

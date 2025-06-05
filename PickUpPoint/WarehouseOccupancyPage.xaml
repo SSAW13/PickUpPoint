@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PickUpPoint.WarehouseOccupancyPage"
+             Title="Занятость склада">
+    <VerticalStackLayout>
+        <Grid x:Name="SquaresGrid" 
+              RowSpacing="10" 
+              ColumnSpacing="10"
+              Padding="20">
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

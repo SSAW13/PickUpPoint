@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PickUpPoint.AdminPanelPage"
+             Title="Админ-панель">
+
+    <VerticalStackLayout Spacing="15" Padding="20">
+        <Label Text="Создание нового пользователя:" TextColor="White"/>
+        <Entry Placeholder="Введите фамилию" x:Name="LastnameEntry"/>
+        <Entry Placeholder="Введите имя" x:Name="NameEntry"/>
+        <Entry Placeholder="Введите логин" x:Name="LoginEntry"/>
+        <Entry Placeholder="Введите пароль" x:Name="PasswordEntry"/>
+
+        <Button Text="Добавить пользователя" 
+                BackgroundColor="#512BD4"
+                TextColor="White"
+                Clicked="CreateNewUser"/>
+
+        <Label Text="   "/>
+        <Label Text="Отчеты:" TextColor="White"/>
+        <Button Text="Скачать отчет о сотрудниках"
+                BackgroundColor="#512BD4"
+                TextColor="White"
+                Clicked="ReportStaff"/>
+        <Button Text="Скачать отчет о заказах с истекшим сроком"
+                BackgroundColor="#512BD4"
+                TextColor="White"
+                Clicked="ReportWriteOff"/>
+        <Button Text="Скачать отчет о заказах на складе"
+                BackgroundColor="#512BD4"
+                TextColor="White"
+                Clicked="ReportOrder"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PickUpPoint.WriteOffPage"
+             Title="Списать заказ">
+    <VerticalStackLayout Spacing="15" Padding="20">
+        <Label Text="Введите номер заказа:"/>
+        <Entry x:Name="OrderIdEntry" 
+               Placeholder="Номер заказа"
+               Keyboard="Numeric"/>
+
+        <Button Text="Поиск" 
+        HorizontalOptions="Center"/>
+
+        <Frame x:Name="Order" Padding="15" BackgroundColor="#F0F0F0">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Информация о заказе:" FontAttributes="Bold"/>
+                <Label x:Name="OrderInfoLabel" 
+               Text="Заказ №1813: Истек срок хранения"/>
+                <Label Text="Номер клиента: +7-930-329-23-23"/>
+
+                <Button x:Name="OrderConfirm"
+                Text="Списать заказ" 
+                BackgroundColor="Red"
+                TextColor="White"/>
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

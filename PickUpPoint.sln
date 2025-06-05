@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PickUpPoint", "PickUpPoint\PickUpPoint.csproj", "{6ED51491-0F15-4478-829E-F1C9842499BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6ED51491-0F15-4478-829E-F1C9842499BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ED51491-0F15-4478-829E-F1C9842499BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ED51491-0F15-4478-829E-F1C9842499BF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6ED51491-0F15-4478-829E-F1C9842499BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ED51491-0F15-4478-829E-F1C9842499BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ED51491-0F15-4478-829E-F1C9842499BF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEB0E870-CF4A-4570-8E3C-3DB7F0DC4D60}
+	EndGlobalSection
+EndGlobal
