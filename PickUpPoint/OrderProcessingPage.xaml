@@ -7,22 +7,25 @@
     <VerticalStackLayout Spacing="15" Padding="20">
         <Label Text="Введите номер заказа:"/>
         <Entry x:Name="OrderIdEntry" 
-               Placeholder="Номер заказа"/>
-
+               Placeholder="Номер заказа" 
+               TextChanged="OnEntryTextChanged"
+               MaxLength="10"/>
+        
         <Button Text="Поиск" 
                 Clicked="SearchOrderClicked"
                 HorizontalOptions="Center"/>
 
-        <Frame x:Name="Order" Padding="15" BackgroundColor="#F0F0F0">
+        <Frame x:Name="Order" Padding="15" BackgroundColor="#F0F0F0" IsVisible="False">
             <VerticalStackLayout Spacing="10">
                 <Label Text="Информация о заказе:" FontAttributes="Bold"/>
-                <Label x:Name="OrderInfoLabel" 
-                       Text="Заказ №1812: Готов к выдаче"/>
-                <Label Text="Номер клиента +7-999-999-99-99"/>
-                <Label Text="Ячейка 15"/>
+                <Label x:Name="InfoLabel" 
+                       Text="Заказ: "/>
+                <Label x:Name="PhoneLabel"  Text="Номер клиента: "/>
+                <Label x:Name="CellLabel"  Text="Ячейка: "/>
                 <Button Text="Выдать заказ"
                         BackgroundColor="Green"
-                        TextColor="White"/>
+                        TextColor="White"
+                        Clicked="IssueOrder"/>
             </VerticalStackLayout>
         </Frame>
     </VerticalStackLayout>

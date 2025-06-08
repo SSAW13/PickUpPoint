@@ -4,25 +4,30 @@
              x:Class="PickUpPoint.WriteOffPage"
              Title="Списать заказ">
     <VerticalStackLayout Spacing="15" Padding="20">
+        
         <Label Text="Введите номер заказа:"/>
         <Entry x:Name="OrderIdEntry" 
                Placeholder="Номер заказа"
-               Keyboard="Numeric"/>
+               Keyboard="Numeric"
+               TextChanged="OnEntryTextChanged"/>
 
-        <Button Text="Поиск" 
-        HorizontalOptions="Center"/>
-
-        <Frame x:Name="Order" Padding="15" BackgroundColor="#F0F0F0">
+        <Button Text="Поиск " 
+                HorizontalOptions="Center"
+                Clicked="SearchOrderClicked"/>
+        
+        <Frame x:Name="Order" Padding="15" BackgroundColor="#F0F0F0" IsVisible="False">
             <VerticalStackLayout Spacing="10">
                 <Label Text="Информация о заказе:" FontAttributes="Bold"/>
-                <Label x:Name="OrderInfoLabel" 
-               Text="Заказ №1813: Истек срок хранения"/>
-                <Label Text="Номер клиента: +7-930-329-23-23"/>
+                <Label x:Name="InfoLabel" 
+                       Text="Заказ: "/>
+                <Label x:Name="PhoneLabel"  Text="Номер клиента: "/>
+                <Label x:Name="CellLabel"  Text="Ячейка: "/>
 
                 <Button x:Name="OrderConfirm"
                 Text="Списать заказ" 
                 BackgroundColor="Red"
-                TextColor="White"/>
+                TextColor="White"
+                Clicked="WriteOffOrder"/>
             </VerticalStackLayout>
         </Frame>
     </VerticalStackLayout>
