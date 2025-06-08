@@ -5,25 +5,54 @@
              Title="Личный кабинет">
 
     <VerticalStackLayout Spacing="20" Padding="20">
-        <Label Text="Данные пользователя" FontSize="20" TextColor="White"/>
-        <Label x:Name="lastname" Text="Фамилия:" TextColor="White"/>
-        <Label x:Name="name"  Text="Имя:" TextColor="White"/>
-        <Label x:Name="role" Text="Роль:" TextColor="White"/>
+        <Grid RowDefinitions="auto,auto,auto,auto,auto,auto" 
+              ColumnDefinitions="*,*"
+              Padding="20" 
+              RowSpacing="20"
+              ColumnSpacing="20">
+            <Label Text="Данные пользователя" 
+                   FontSize="20" 
+                   TextColor="White" 
+                   Grid.Column="0" Grid.Row="0"/>
 
+            <Label x:Name="lastname" 
+                   Text="Фамилия:" 
+                   TextColor="White" 
+                   Grid.Column="0" Grid.Row="2"/>
 
-        <Entry Placeholder="Введите старый пароль"/>
-        <Entry Placeholder="Введите новый пароль"/>
-        <Entry Placeholder="Повторите новый пароль"/>
+            <Label x:Name="name"  
+                   Text="Имя:" 
+                   TextColor="White" 
+                   Grid.Column="0" Grid.Row="3"/>
 
-        <Button Text="Сменить пароль"
-                Clicked="ChangeClicked"
-                BackgroundColor="Green"
-                TextColor="White"/>
-        
+            <Label x:Name="role" 
+                   Text="Роль:" 
+                   TextColor="White" 
+                   Grid.Column="0" Grid.Row="4"/>
 
-        <Button Text="Выйти" 
-                Clicked="LogoutClicked"
-                BackgroundColor="Red"
-                TextColor="White"/>
+            <Button Text="Выйти" 
+                    Clicked="LogoutClicked"
+                    BackgroundColor="Red"
+                    TextColor="White"
+                    Grid.Column="0" Grid.Row="5"/>
+
+            <Label Text="Смена пароля"
+                   FontSize="20"
+                   TextColor="White"
+                   Grid.Column="1"
+                   Grid.Row="0"/>
+            
+
+            <Entry x:Name="OldPass" Placeholder="Введите старый пароль" Grid.Column="1" Grid.Row="2" IsPassword="True"/>
+            <Entry x:Name="NewPass"  Placeholder="Введите новый пароль" Grid.Column="1" Grid.Row="3" IsPassword="True"/>
+            <Entry x:Name="reNewPass"  Placeholder="Повторите новый пароль" Grid.Column="1" Grid.Row="4" IsPassword="True"/>
+
+            <Button Text="Сменить пароль"
+                    Clicked="EditPassword"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    Grid.Column="1"
+                    Grid.Row="5"/>
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>

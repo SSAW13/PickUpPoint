@@ -20,7 +20,7 @@ public partial class LoginPage : ContentPage
         UsernameEntry.Text = "";
         PasswordEntry.Text = "";
 
-        string query = "SELECT lastname, name, role FROM users WHERE login = \'" + login + "\' AND password = \'" + password + "\';";
+        string query = "SELECT lastname, name, role, login FROM users WHERE login = \'" + login + "\' AND password = \'" + password + "\';";
 
         DataTable dataTable = _databaseConnection.ExecuteQuery(query);
 
@@ -30,6 +30,7 @@ public partial class LoginPage : ContentPage
             await SecureStorage.Default.SetAsync("lastname", dataTable.Rows[0][0].ToString());
             await SecureStorage.Default.SetAsync("name", dataTable.Rows[0][1].ToString());
             await SecureStorage.Default.SetAsync("role", dataTable.Rows[0][2].ToString());
+            await SecureStorage.Default.SetAsync("login", dataTable.Rows[0][3].ToString());
             await Navigation.PushAsync(new MainPage());
 
         }
