@@ -6,9 +6,16 @@
 
     <ScrollView>
         <VerticalStackLayout Spacing="15" Padding="20">
-            <Entry x:Name="Num"  Placeholder="Номер ячейки склада" Keyboard="Numeric"/>
-            <Entry Placeholder="Имя клиента"/>
-            <Entry x:Name="Phone" Placeholder="Телефон" Keyboard="Telephone"/>
+
+            <Picker x:Name="SizeEditor" Title="Выберите размер" SelectedIndexChanged="SizeEditor_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>s</x:String>
+                    <x:String>m</x:String>
+                    <x:String>l</x:String>
+                </Picker.Items>
+            </Picker>
+            <Picker x:Name="CellEditor" Title="Выберите элемент" IsVisible="Hidden"/>
+            <Entry x:Name="Phone" Placeholder="Телефон" Keyboard="Telephone" MaxLength="11" Text="89" TextChanged="OnEntryTextChanged"/>
             
 
             <Button Text="Сохранить заказ" 
